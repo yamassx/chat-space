@@ -23,17 +23,17 @@ Things you may want to cover:
 |id|integer|null: false|
 |email|string|null: false|
 |password|string|null: false|
-|username|string|null: false|
+|name|string|null: false|
 ### Association
-- has_many :message
-- has_many :group
-- has_many :member
+- has_many :messages
+- has_many :groups　through: :members
+
 
 ## messagesテーブル
 |Column|Type|Options|
 |------|----|-------|
-
-|text|text|null: false|
+|image|string|
+|text|text|
 |user_id|integer|null: false, foreign_key: true|
 |group_id|integer|null: false, foreign_key: true|
 |created_at|timestamp|
@@ -41,18 +41,18 @@ Things you may want to cover:
 
 ### Association
 - belongs_to :user
-- belongs_to :groupe
+- belongs_to :group
 
 ## groupsテーブル
 |Column|Type|Options|
 |------|----|-------|
 |id|integer|null: false|
-|title|string|null: false|
+|name|string|null: false|
 
 ### Association
-- has_many :user
-- has_many :message
-- has_many :member
+- has_many :users trough: :members
+- has_many :messages
+-
 
 ## membersテーブル
 |Column|Type|Options|
