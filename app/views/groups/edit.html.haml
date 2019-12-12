@@ -16,9 +16,11 @@
     .chat-group-form__field
       .chat-group-form__field--left
         %label.chat-group-form__label チャットメンバー
+          %= collection_check_boxes object, method, collection, value_method, text_method, {}
       .chat-group-form__field--right
         / グループ作成機能の追加時はここにcollection_check_boxesの記述を入れてください
         / この部分はインクリメンタルサーチ(ユーザー追加の非同期化)のときにも使用します
+
     .chat-group-form__field
       .chat-group-form__field--left
       .chat-group-form__field--right
