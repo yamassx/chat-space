@@ -1,4 +1,7 @@
   class GroupsController < ApplicationController
+  def index
+  end
+
   def new
     @group = Group.new
     @group.users << current_user
@@ -25,7 +28,7 @@
   private
 
   def groups_params
-    params.require(:group).permit(:name, users_ids: [])
+    params.require(:group).permit(:name, { :user_ids => [] })
   end
 
 

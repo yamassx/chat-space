@@ -42,28 +42,40 @@
      }
     }
   }
-  &__group {
-    height: 91px;
-    width: 100%;
-    position: relative;
-    &__group_name {
-      position: absolute;
-      top: 20px;
-      left: 20px;
-      font-size: 15px;
-      line-height: 15px;
-      font-weight: bold;
-      color: #ffffff;
+  &__groups {
+    // height: 91px;
+    // width: 100%;
+    // position: relative;
+    // .group_link {
+    //   text-decoration: none;
+    //   color:white;
+    // }
+    &__group {
+      height: 91px;
+      width: 100%;
+      position: relative;
+      .group_link {
+        text-decoration: none;
+        color:white;
+      }
+      &__group_name {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        font-size: 15px;
+        line-height: 15px;
+        font-weight: bold;
+        color: #ffffff;
+      }
+      &__group_message {
+        position: absolute;
+        top: 55px;
+        left: 20px;
+        font-size: 11px;
+        color: #ffffff;
+        font-weight: bold;
+        line-height: 11px;
+      }
     }
-    &__group_message {
-      position: absolute;
-      top: 55px;
-      left: 20px;
-      font-size: 11px;
-      color: #ffffff;
-      font-weight: bold;
-      line-height: 11px;
-    }
-    
   }
 }
