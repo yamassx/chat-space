@@ -17,12 +17,16 @@
   end
 
   def edit
-    @group = Group.find(groups_params[:id])
+    @group = Group.find(params[:id])
   end
 
   def update
     group = Group.find(params[:id])
-    group.update(groups_params)
+    if group.update(groups_params)
+      redirect_to root_path, notice: 'グループを更新しました'
+    else
+      render :edit
+    end
   end
 
   private

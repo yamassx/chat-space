@@ -13,7 +13,7 @@
   .side_bar__groups 
     - current_user.groups.each do |group|  
       .side_bar__groups__group
-        = link_to '#', class: 'group_link' do
+        = link_to group_messages_path(group), class: 'group_link' do
           .side_bar__groups__group__group_name
             = group.name
           .side_bar__groups__group__group_message
