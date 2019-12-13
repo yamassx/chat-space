@@ -51,11 +51,11 @@ Things you may want to cover:
 |name|string|null: false|
 
 ### Association
-- has_many :users trough: :members
+- has_many :users trough: :group_users
 - has_many :messages
-- has_many :members
+- has_many :group_users
 
-## membersテーブル
+## group_usersテーブル
 |Column|Type|Options|
 |------|----|-------|
 |groupe_id|integer|null: false, foreign_key: true|
