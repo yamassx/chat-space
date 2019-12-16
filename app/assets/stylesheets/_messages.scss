@@ -57,7 +57,7 @@
     height: calc(100vh - 100px - 90px);
     width: calc(100vw - 300px);
     padding: 46px 40px ;
-    &__message1 {
+    &__message {
       padding-bottom: 46px ;
       &__upper {
         display: flex;
@@ -79,28 +79,28 @@
         font-size: 14px;
         }
     }
-    &__message2 {
-      padding-bottom: 46px;
-      &__upper {
-        display: flex;
-        justify-content: flex-start;
-        margin-bottom: 12px;
-        &__user_name {
-        color: #333333;
-        font-size: 16px;
-        font-weight: bold;
-        }
-        &__timestamp {
-          color: #999999;
-          font-size: 12px;
-          margin-left: 1em;
-        }        
-      }     
-      &__text {
-        color: #434A54;
-        font-size: 14px;
-        }
-    }
+    // &__message2 {
+    //   padding-bottom: 46px;
+    //   &__upper {
+    //     display: flex;
+    //     justify-content: flex-start;
+    //     margin-bottom: 12px;
+    //     &__user_name {
+    //     color: #333333;
+    //     font-size: 16px;
+    //     font-weight: bold;
+    //     }
+    //     &__timestamp {
+    //       color: #999999;
+    //       font-size: 12px;
+    //       margin-left: 1em;
+    //     }        
+    //   }     
+    //   &__text {
+    //     color: #434A54;
+    //     font-size: 14px;
+    //     }
+    // }
   }
   .form {
     background-color: #DDDDDD;
@@ -112,6 +112,7 @@
       float: left;
       height: 50px;
       width: calc(100% - 150px);
+      padding-left: 10px;
     }
     &__mask {
       background-color: white;

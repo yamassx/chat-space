@@ -10,23 +10,27 @@
       =link_to "#", class: "edit_btn" do
         Edit
   .main_chat__messages
-    .main_chat__messages__message1
-      .main_chat__messages__message1__upper
-        .main_chat__messages__message1__upper__user_name
-          やまニャン
-        .main_chat__messages__message1__upper__timestamp
-          3年前のあの日あの時
-      .main_chat__messages__message1__text
-        芦屋浜はネ申
+    = render @messages
+    -# .main_chat__messages__message
+    -#   .main_chat__messages__message__upper
+    -#     .main_chat__messages__message__upper__user_name
+    -#       = message.user.name
+    -#     .main_chat__messages__message__upper__timestamp
+    -#       = message.created_at.strftime("%Y/%m/%d %H:%M")
+    -#   .main_chat__messages__message__text
+    -#     - if message.text.present?
+    -#       %p.main_chat__messages__message__text__content
+    -#         = message.text
+    -#     = image_tag message.image.url, class: 'lower-message__image' if message.image.present?
 
-    .main_chat__messages__message2
-      .main_chat__messages__message2__upper
-        .main_chat__messages__message2__upper__user_name
-          スーパーハカー龍二
-        .main_chat__messages__message2__upper__timestamp
-          常に監視している
-      .main_chat__messages__message2__text
-        ちょっと通りますよ
+    -# .main_chat__messages__message2
+    -#   .main_chat__messages__message2__upper
+    -#     .main_chat__messages__message2__upper__user_name
+    -#       スーパーハカー龍二
+    -#     .main_chat__messages__message2__upper__timestamp
+    -#       常に監視している
+    -#   .main_chat__messages__message2__text
+    -#     ちょっと通りますよ
 
     -# inputタグでの仮置き
   -# .main_chat__form
