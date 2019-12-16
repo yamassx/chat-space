@@ -1,4 +1,4 @@
-.mein_chat
+.main_chat
 
   .main_chat__name
     .main_chat__name__contents
@@ -10,32 +10,44 @@
       =link_to "#", class: "edit_btn" do
         Edit
   .main_chat__messages
-    .main_chat__messages__message1
-      .main_chat__messages__message1__upper
-        .main_chat__messages__message1__upper__user_name
-          やまニャン
-        .main_chat__messages__message1__upper__timestamp
-          3年前のあの日あの時
-      .main_chat__messages__message1__text
-        芦屋浜はネ申
+    = render @messages
+    -# .main_chat__messages__message
+    -#   .main_chat__messages__message__upper
+    -#     .main_chat__messages__message__upper__user_name
+    -#       = message.user.name
+    -#     .main_chat__messages__message__upper__timestamp
+    -#       = message.created_at.strftime("%Y/%m/%d %H:%M")
+    -#   .main_chat__messages__message__text
+    -#     - if message.text.present?
+    -#       %p.main_chat__messages__message__text__content
+    -#         = message.text
+    -#     = image_tag message.image.url, class: 'lower-message__image' if message.image.present?
 
-    .main_chat__messages__message2
-      .main_chat__messages__message2__upper
-        .main_chat__messages__message2__upper__user_name
-          スーパーハカー龍二
-        .main_chat__messages__message2__upper__timestamp
-          常に監視している
-      .main_chat__messages__message2__text
-        ちょっと通りますよ
-      
-  .main_chat__form
-    .main_chat__form__textarea
-      .main_chat__form__textarea__input
-        %input.input-message{placeholder: :"type a message"}
-      .main_chat__form__textarea__img_select
-        %label
-          %i.fa.fa-image
-          %input{type: 'file', class: 'file_select'}
+    -# .main_chat__messages__message2
+    -#   .main_chat__messages__message2__upper
+    -#     .main_chat__messages__message2__upper__user_name
+    -#       スーパーハカー龍二
+    -#     .main_chat__messages__message2__upper__timestamp
+    -#       常に監視している
+    -#   .main_chat__messages__message2__text
+    -#     ちょっと通りますよ
 
-    .main_chat__form__submit_btn
-      Send
+    -# inputタグでの仮置き
+  -# .main_chat__form
+  -#   .main_chat__form__textarea
+  -#     .main_chat__form__textarea__input
+  -#       %input.input-message{placeholder: :"type a message"}
+  -#     .main_chat__form__textarea__img_select
+  -#       %label
+  -#         %i.fa.fa-image
+  -#         %input{type: 'file', class: 'file_select'}
+  -#   .main_chat__form__submit_btn
+  -#     Send
+  .form
+    = form_for [@group, @message] do |f|
+      = f.text_field :text, class: 'form__message', placeholder: 'type a message'
+      .form__mask
+        = f.label :image, class: 'form__mask__image' do
+          = icon('fas', 'image', class: 'icon')
+          = f.file_field :image, class: 'hidden'
+      = f.submit 'Send', class: 'form__submit'
