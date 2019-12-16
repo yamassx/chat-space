@@ -3,12 +3,12 @@
   .main_chat__name
     .main_chat__name__contents
       .main_chat__name__contents__group_name
-        太刀魚釣りに行きたい 
-      .main_chat__name__contents__group_member
-        member:ぼく
+        = @group.name 
+      .main_chat__name__contents__group_member 
+      -@group.users.each do |user|
+        = "member: #{user.name}"
     .main_chat__name__edit
-      =link_to "#", class: "edit_btn" do
-        Edit
+      =link_to "Edit", edit_group_path(@group), class: "edit_btn" 
   .main_chat__messages
     = render @messages
     -# .main_chat__messages__message
