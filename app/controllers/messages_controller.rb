@@ -13,12 +13,16 @@ def create
   @message = @group.messages.new(message_params)
 
   if @message.save
-    redirect_to group_messages_path, notice: "メッセージが保存できたよ"
+    respond_to do |format|
+      format.html { redirect_to group_messages_path, notice: "メッセージを送信しました" }
+      format.json
+    end
   else
     @messages = @group.messages.includes(:user)
     flash.now[:alert] = "残念！メッセージ保存失敗"
     render :index
   end
+  
 end
 
 private
