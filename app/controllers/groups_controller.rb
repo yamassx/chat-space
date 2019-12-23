@@ -22,6 +22,7 @@
 
   def update
     group = Group.find(params[:id])
+    # binding.pry
     if group.update(groups_params)
       redirect_to group_messages_path(group), notice: 'グループを更新しました'
     else

@@ -4,9 +4,10 @@
     .main_chat__name__contents
       .main_chat__name__contents__group_name
         = @group.name 
-      .main_chat__name__contents__group_member 
-      -@group.users.each do |user|
-        = "member: #{user.name}"
+      .main_chat__name__contents__group_member
+        member: 
+        -@group.users.each do |user|
+          =  "#{user.name}"
     .main_chat__name__edit
       =link_to "Edit", edit_group_path(@group), class: "edit_btn" 
   .main_chat__messages
