@@ -30,7 +30,7 @@ $(function(){
   }
   function addMember(userId) {
     let html = `<input value="${userId}" name="group[user_ids][]" type="hidden" id="group_user_ids_${userId}" />`;
-    $(`#${userId}`).append(html);
+    $('${userId}').append(html);
   }
   $('#user-search-field').on('keyup', function(){
     var input = $('#user-search-field').val()   //フォームの値を取得して変数に代入する
