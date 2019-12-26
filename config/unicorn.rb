@@ -13,7 +13,6 @@ stderr_path "#{app_path}/shared/log/unicorn.stderr.log"
 stdout_path "#{app_path}/shared/log/unicorn.stdout.log"
 
 #アプリケーションの設置されているディレクトリを指定
-working_directory app_path
 
 
 
