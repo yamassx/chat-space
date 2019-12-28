@@ -5,6 +5,7 @@ $(function(){
       if (message.text){
         
         var html = `<div class="message" data-message-id = ${message.id}>
+                    <div class="main_chat__messages__message>
                     <div class="main_chat__messages__message__upper">
                       <div class="main_chat__messages__message__upper__user_name">
                       ${message.user_name}
@@ -20,10 +21,12 @@ $(function(){
                       <img class="lower-message__image" src=${message.image} alt="Images">
                       </img>
                   </div>
+                  </div>
                   </div>`
       }
       else {
         var html = `<div class="message" data-message-id = ${message.id}>
+                    <div class="main_chat__messages__message>
                       <div class="main_chat__messages__message__upper">
                         <div class="main_chat__messages__message__upper__user_name">
                         ${message.user_name}
@@ -32,13 +35,17 @@ $(function(){
                         ${message.created_at}
                         </div>
                       </div>
+                      <div class="main_chat__messages__message__text">
                       <img class="lower-message__image" src=${message.image} alt="Images">
+                      </div>
                       </img>
+                      </div>
                     </div>`
       }
     }
     else {
       var html = `<div class="message" data-message-id = ${message.id}>
+                    <div class="main_chat__messages__message>
                     <div class="main_chat__messages__message__upper">
                       <div class="main_chat__messages__message__upper__user_name">
                         ${message.user_name}
@@ -51,6 +58,7 @@ $(function(){
                       <p class="main_chat__messages__message__text__content">
                         ${message.text}
                       </p>
+                    </div>
                     </div>
                   </div>`
     }
