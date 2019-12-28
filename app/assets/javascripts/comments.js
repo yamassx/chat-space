@@ -103,21 +103,19 @@ $(function(){
         var insertHTML = '';
         //配列messagesの中身一つ一つを取り出し、HTMLに変換したものを入れ物に足し合わせる
         messages.forEach(function(message){
-          insertHTML += buildHTML(message)
+        insertHTML += buildHTML(message)
         });
         $('.main_chat__messages').append(insertHTML);
         $('.main_chat__messages').animate({ scrollTop: $('.main_chat__messages')[0].scrollHeight});
       }
         //メッセージが入ったHTMLに、入れ物ごと追加
     })
-      .fail(function() {
-        alert('error');
-      }); 
+    .fail(function() {
+      alert('error');
+    }); 
   }
  
  if (document.location.href.match(/\/groups\/\d+\/messages/)) {
-  //  if (insertHTML != buildHTML) {
    setInterval(reloadMessages, 7000);
-  //  }
  }
 });
