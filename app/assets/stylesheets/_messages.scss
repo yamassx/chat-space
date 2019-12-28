@@ -8,10 +8,15 @@
 }
 
 
+
 .main_chat {
+
   height: 100vh;
   width: calc(100vw - 300px);
   position: relative;
+  .message {
+    margin-top: 40px;
+  }
   &__name {
     height: 100px;
     width: calc(100vw - 300px);
@@ -60,7 +65,7 @@
     width: calc(100vw - 300px);
     padding: 46px 40px ;
     &__message {
-      padding-bottom: 46px ;
+      // padding-bottom: 46px ;
       &__upper {
         display: flex;
         justify-content: flex-start;

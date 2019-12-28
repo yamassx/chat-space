@@ -5,60 +5,56 @@ $(function(){
       if (message.text){
         
         var html = `<div class="message" data-message-id = ${message.id}>
-                    <div class="main_chat__messages__message>
-                    <div class="main_chat__messages__message__upper">
-                      <div class="main_chat__messages__message__upper__user_name">
-                      ${message.user_name}
+                      <div class="main_chat__messages__message">
+                        <div class="main_chat__messages__message__upper">
+                          <div class="main_chat__messages__message__upper__user_name">
+                            ${message.user_name}
+                          </div>
+                          <div class="main_chat__messages__message__upper__timestamp">
+                            ${message.created_at}
+                          </div>
+                        </div>
+                        <div class="main_chat__messages__message__text">
+                          <div class="main_chat__messages__message__text__content">
+                            ${message.text}
+                          </div>  
+                          <img class="lower-message__image" src=${message.image} alt="Images">
+                        </div>
                       </div>
-                      <div class="main_chat__messages__message__upper__timestamp">
-                      ${message.created_at}
-                      </div>
-                    </div>
-                    <div class="main_chat__messages__message__text">
-                      <p class="main_chat__messages__message__text__content">
-                      ${message.text}
-                      </p>  
-                      <img class="lower-message__image" src=${message.image} alt="Images">
-                      </img>
-                  </div>
-                  </div>
-                  </div>`
+                    </div>`
       }
       else {
         var html = `<div class="message" data-message-id = ${message.id}>
-                    <div class="main_chat__messages__message>
-                      <div class="main_chat__messages__message__upper">
-                        <div class="main_chat__messages__message__upper__user_name">
-                        ${message.user_name}
+                      <div class="main_chat__messages__message">
+                        <div class="main_chat__messages__message__upper">
+                          <div class="main_chat__messages__message__upper__user_name">
+                            ${message.user_name}
+                          </div>
+                          <div class="main_chat__messages__message__upper__timestamp">
+                            ${message.created_at}
+                          </div>
                         </div>
-                        <div class="main_chat__messages__message__upper__timestamp">
-                        ${message.created_at}
-                        </div>
-                      </div>
-                      <div class="main_chat__messages__message__text">
-                      <img class="lower-message__image" src=${message.image} alt="Images">
-                      </div>
-                      </img>
+                        <img class="lower-message__image" src=${message.image} alt="Images">
                       </div>
                     </div>`
       }
     }
     else {
       var html = `<div class="message" data-message-id = ${message.id}>
-                    <div class="main_chat__messages__message>
-                    <div class="main_chat__messages__message__upper">
-                      <div class="main_chat__messages__message__upper__user_name">
-                        ${message.user_name}
+                    <div class="main_chat__messages__message">
+                      <div class="main_chat__messages__message__upper">
+                        <div class="main_chat__messages__message__upper__user_name">
+                          ${message.user_name}
+                        </div>
+                        <div class="main_chat__messages__message__upper__timestamp">
+                          ${message.created_at}
+                        </div>
                       </div>
-                      <div class="main_chat__messages__message__upper__timestamp">
-                        ${message.created_at}
+                      <div class="main_chat__messages__message__text">
+                        <div class="main_chat__messages__message__text__content">
+                          ${message.text}
+                        </div>
                       </div>
-                    </div>
-                    <div class="main_chat__messages__message__text">
-                      <p class="main_chat__messages__message__text__content">
-                        ${message.text}
-                      </p>
-                    </div>
                     </div>
                   </div>`
     }
